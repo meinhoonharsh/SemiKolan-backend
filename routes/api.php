@@ -1,9 +1,11 @@
 <?php
 
+namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +32,6 @@ Route::post('googleauth', [AuthController::class, 'googleauth']);
 Route::middleware("auth:api")->group(function () {
     Route::get('/profile', [ProfileController::class, 'getProfile']);
     Route::post('/profile', [ProfileController::class, 'updateProfile']);
+
+    Route:get('/getallposts', [PostController::class, 'getAllPosts']);
 });

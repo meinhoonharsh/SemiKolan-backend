@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('koins', function (Blueprint $table) {
+            // amount, user_id, purpose, active
             $table->id();
+            $table->integer('amount');
+            $table->foreignId('user_id');
+            $table->string('purpose')->nullable();
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

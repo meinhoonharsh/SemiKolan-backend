@@ -33,5 +33,5 @@ Route::middleware("auth:api")->group(function () {
     Route::get('/profile', [ProfileController::class, 'getProfile']);
     Route::post('/profile', [ProfileController::class, 'updateProfile']);
 
-    Route:get('/getallposts', [PostController::class, 'getAllPosts']);
+    Route::get('/getallposts', [PostController::class, 'getAllPosts']);
 });

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('caption')->nullable();
             $table->string('image')->nullable();
-            $table->json('interests')->default([]);
+            $table->json('interests')->default('[]');
             $table->boolean('active')->default(true);
             $table->timestamps();
         });

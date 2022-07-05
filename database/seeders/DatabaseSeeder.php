@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         // Import the seeder classes here
         $this->call(InterestSeeder::class);
+        $this->call(PostSeeder::class);
     }
 }
